@@ -1,0 +1,255 @@
+:root {
+  --azul: #004691;
+  --azul-oscuro: #00306b;
+  --terracota: #c76b4a;
+  --terracota-suave: #f3e3dc;
+  --gris-fondo: #f3f4f6;
+  --gris-texto: #6b7280;
+  --gris-borde: #e5e7eb;
+  --verde-activa: #16a34a;
+  --rojo-bloqueada: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--gris-fondo);
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.site-header {
+  background: var(--azul);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.site-header h1 span {
+  font-weight: 700;
+}
+
+.site-footer {
+  background: #fafafa;
+  color: #9ca3af;
+  font-size: 0.625rem;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid var(--gris-borde);
+}
+
+
+.resumen-container {
+  flex: 1;
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  padding: 1.75rem;
+}
+
+
+.card-cliente-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.25rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gris-texto);
+}
+
+
+.card-cliente-top h2 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--azul-oscuro);
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge-activa {
+  background: #dcfce7;
+  color: var(--verde-activa);
+}
+
+.badge-bloqueada {
+  background: #fee2e2;
+  color: var(--rojo-bloqueada);
+}
+
+.card-cliente-bottom {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--gris-borde);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.dato-tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dato-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gris-texto);
+}
+
+.dato-valor {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.mono {
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.05em;
+}
+
+
+.monto-grande {
+  font-family: "Fraunces", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--terracota);
+}
+
+
+.card-liquidacion {
+  background: var(--azul);
+  color: white;
+
+  border-left: 6px solid var(--terracota);
+}
+
+.card-liquidacion h3 {
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.grid-liquidacion {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.dato-label-dark {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+  margin-bottom: 0.25rem;
+}
+
+.dato-valor-dark {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.dato-valor-dark.monto {
+  font-family: "Fraunces", serif;
+  font-size: 1.35rem;
+}
+
+.vacio {
+  color: var(--gris-texto);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.card-liquidacion .vacio {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+.card-historial h3 {
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--azul);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gris-texto);
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+tbody td {
+  padding: 0.6rem 0.25rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+td.monto {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+}
+
+
+@media (max-width: 640px) {
+  .card-cliente-bottom,
+  .grid-liquidacion {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
