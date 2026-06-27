@@ -5,7 +5,8 @@
 ¡Bienvenido al Trabajo Práctico Integrador de la asignatura **Programación III**! En este proyecto vas a trabajar en la integración de plataformas implementando un ecosistema donde una aplicación de escritorio y un portal web comparten la misma base de datos relacional.
 
 ALUMNOS:
-Nombres: Faraone Pablo y Martinez Julian
+Nombres y Legajo:
+Faraone Pablo (30813) y Martinez Julian (38480)
 Comisión: N3
 ---
 
